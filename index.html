@@ -8,96 +8,88 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
 
-    <div class="folders">
+    <div class="wrapper__button">
 
-        <ul class="menu">
-            <li class="menu__item">
-                <div class="dropdown__open dropdown__padding">
-                    <button class="menu__btn">+</button>
-                    <img class="menu__images" src="img/open-folder.png" alt="open-folder">
-                    <p class="menu__text">Folder 1</p>
-                </div>
-                <div class="dropdown">
-                    <ul class="dropdown__list">
-                        <li class="dropdown__item">
-                            <div class="dropdown__open">
-                                <img class="menu__images" src="img/file.png" alt="open-folder">
-                                <p class="menu__text">Item 1.1</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu__item">
-                <div class="dropdown__open dropdown__padding">
-                    <button class="menu__btn">+</button>
-                    <img class="menu__images" src="img/open-folder.png" alt="open-folder">
-                    <p class="menu__text">Folder 2</p>
-                </div>
-                <div class="dropdown">
-                    <ul class="dropdown__list">
-                        <li class="dropdown__item">
-                            <div class="dropdown__open dropdown__padding">
-                               <button class="menu__btn">+</button>
-                                <img class="menu__images" src="img/open-folder.png" alt="open-folder">
-                                <p class="menu__text">Subfolder 2.1</p>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__item">
-                                        <div class="dropdown__open">
-                                            <img class="menu__images" src="img/file.png" alt="open-folder">
-                                            <p class="menu__text">File 2.1.1</p>
-                                        </div>
-                                    </li>
-                                    <li class="dropdown__item">
-                                        <div class="dropdown__open">
-                                            <img class="menu__images" src="img/file.png" alt="open-folder">
-                                            <p class="menu__text">File 2.1.2</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                       <li class="menu__item">
-                        <div class="dropdown__open">
-                            <img class="menu__images" src="img/file.png" alt="open-folder">
-                            <p class="menu__text">File 2.2</p>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu__item">
-                <div class="dropdown__open dropdown__padding">
-                    <button class="menu__btn">+</button>
-                    <img class="menu__images" src="img/open-folder.png" alt="open-folder">
-                    <p class="menu__text">Folder 3</p>
-                </div>
-                <div class="dropdown">
-                    <ul class="dropdown__list">
-                        <li class="dropdown__item">
-                            <div class="dropdown__open">
-                                <img class="menu__images" src="img/file.png" alt="open-folder">
-                                <p class="menu__text">File 3.1</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu__item">
-                <div class="dropdown__open">
-                    <img class="menu__images" src="img/file.png" alt="open-folder">
-                    <p class="menu__text">File 4</p>
-                </div>
-            </li>
-        </ul>
+        <button class="btn">Кликни</button>
 
     </div>
 
+    <div class="wrapper">
 
+        <div class="wrapper__modal modal">
+
+            <div class="modal__box">
+
+                <div class="inner-wrapp__left">
+
+                    <h1 class="modal__tile">Получите набор файлов для руководителя:</h1>
+
+                    <div class="modal__icon">
+
+                        <img src="img/xls.png" alt="xls">
+                        <img src="img/doc.png" alt="doc">
+                        <img src="img/pdf.png" alt="pdf">
+                        <img src="img/pdf.png" alt="pdf">
+                        <img src="img/pdf.png" alt="pdf">
+                        <img src="img/pdf.png" alt="pdf">
+                        <img src="img/pdf.png" alt="pdf">
+
+                    </div>
+
+                    <div class="modal__image-file">
+
+                        <img src="img/file.png" alt="">
+
+                    </div>
+
+                </div>
+
+                <div class="inner-wrapp__right">
+
+                    <form class="form" action="server.php" method="POST" enctype="multipart/form-data">
+
+                        <div class="form__item">
+
+                            <label class="form__label">Введите Email для получения файлов:</label>
+                            <input class="form__input" type="email" name="email" id="" placeholder="Email" required>
+
+                        </div>
+
+                        <div class="form__item">
+
+                            <label class="form__label">Введите телефон для подтверждения доступа:</label>
+                            <input class="form__input" type="tel" name="phone" data-tel-input maxlength="18" placeholder="+7 (000) 000-00-00" required>
+
+                        </div>
+
+                        <div class="form__button">
+
+                            <button class="form__btn">Скачать файлы <img src="img/arm.png" alt="arm"></button>
+
+                        </div>
+
+                        <div class="form__text">
+                            <p>PDF 4,7 MB</p>
+                            <p>DOC 0,8 MB</p>
+                            <p>XLS 1,2 MB</p>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="modal__close">
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="js/main.js"></script>
 </body>
